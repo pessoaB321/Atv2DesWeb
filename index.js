@@ -1,3 +1,4 @@
+// parte 1
 const express = require('express');
 const app = express();
 
@@ -9,3 +10,8 @@ app.listen(
     3000, 
     () => console.log(`Servidor em execução`)
 );
+//parte dois: criação dos manos gets, questão 2
+
+app.get('/sobre', (req, res)=>{
+  res.send('Oi, estou louca ao completar esse trabalho, me perdoe, é estranho mexer no git, é desconfortável...')
+})
