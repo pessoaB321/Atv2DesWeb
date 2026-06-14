@@ -31,3 +31,10 @@ app.get('/erro', (req, res)=>{
 app.get('/início', (req, res)=> {
   res.redirect('/')
 });
+
+//questão 6:
+
+app.get('/usuario/:id', (req, res)=>{
+  const userid = req.params.id;
+  res.send('sei la ' + userid);
+});
