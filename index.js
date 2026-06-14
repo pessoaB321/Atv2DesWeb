@@ -46,3 +46,10 @@ app.get('/produtos/:nome', (req, res)=>{
   res.send(' Texto a' + testeAB)
   
 });
+//questão 8
+app.get('/filmes/:id/:nome',(req, res)=>{
+  const Jasei= req.params.id
+  const EssaEnova= req.params.nome
+  res.send('id do textinho  '+ Jasei+'  que chatice nao pode colocar em outro res.send ' + EssaEnova)
+ 
+})
