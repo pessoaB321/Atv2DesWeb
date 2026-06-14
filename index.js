@@ -56,5 +56,14 @@ app.get('/filmes/:id/:nome',(req, res)=>{
 //questão 9 ok
 app.get('/buscar', (req, res)=>{
   const nomeA = req.query.nomeA
-  res.send('Buscado por ' + nomeA)
+  res.send('Buscado por indivíduo denominado de ' + nomeA)
 })
+//questão 10
+//http://localhost:3000/produtos?categ=Teste&pagina=5252525
+// perceba o usso do ? e &, será importante para o futuro...
+app.get('/produtos', (req, res)=>{
+  const categ = req.query.categ
+  const pagina = req.query.pagina
+  res.send('Olha, uma categoria de ' + categ + ' na pagina ' + pagina)
+})
+ 
