@@ -26,3 +26,8 @@ app.get ('/contato', (req, res)=>{
 app.get('/erro', (req, res)=>{
   res.status(404).send('Ops, página não encontrada.')
 })
+//questão 5:
+
+app.get('/início', (req, res)=> {
+  res.redirect('/')
+});
