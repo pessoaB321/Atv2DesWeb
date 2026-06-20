@@ -66,4 +66,9 @@ app.get('/produtos', (req, res)=>{
   const pagina = req.query.pagina
   res.send('Olha, uma categoria de ' + categ + ' na pagina ' + pagina)
 })
- 
+//questão 11: 
+//http://localhost:3000/usuario?idade=18
+app.get('/usuario',(req,res)=>{
+  const idade= req.query.idade
+  res.send('SE isso aparecer ' + idade + ' é poqrque o brasil ganhou')
+})
