@@ -79,3 +79,8 @@ app.get('/usuario',(req,res)=>{
 app.get('/', (req,res)=>{
   res.render('home', {titilo:'entendi fi tudo'});
 })
+
+//questão 13:yes
+app.get('/perfil',(req,res)=>{
+  res.render('home',{nome:'Criatividade', idade:26})
+})
