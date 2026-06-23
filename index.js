@@ -89,3 +89,8 @@ app.get('/filmes',(req,res)=>{
  const filmes = ['doraemon','backrroms','diabo veste prada']
  res.render('home',{filmes} )
 })
+// questao 15
+app.get('/qualquercoisa', (res, req)=>{
+  const teste = true 
+  res.render('home', {teste})
+})
