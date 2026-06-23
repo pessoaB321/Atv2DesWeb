@@ -84,3 +84,8 @@ app.get('/', (req,res)=>{
 app.get('/perfil',(req,res)=>{
   res.render('home',{nome:'Criatividade', idade:26})
 })
+//questão 14 envolve {{#each}}, ver o respectivo commit 
+app.get('/filmes',(req,res)=>{
+ const filmes = ['doraemon','backrroms','diabo veste prada']
+ res.render('home',{filmes} )
+})
