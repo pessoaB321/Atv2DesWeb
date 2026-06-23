@@ -1,17 +1,20 @@
 // parte 1
 //para rodar é node nome do aquivo.js e depois colocar http://localhost:3000
 //Não, na verdade é node --watch nomedoaquivo.js
+
+//import home from './views/home.handlebars';
 const express = require('express');
 const app = express();
+const exphbs = require('express-handlebars');
 
-app.get('/', (req, res) => {
-  res.send('SIMMMMMM eu CONSEGUIIIIIIII');
+app.engine('handlebars', exphbs.engine({defaultLayout:false}));
+app.set('view engine', 'handlebars');
+
+app.listen(3000, () => {
+  console.log('Servidor em http://localhost:3000');
 });
 
-app.listen(
-    3000, 
-    () => console.log(`Servidor em execução`)
-);
+
 //parte dois: criação dos primeiro mano get, questão 2
 
 app.get('/sobre', (req, res)=>{
@@ -71,4 +74,8 @@ app.get('/produtos', (req, res)=>{
 app.get('/usuario',(req,res)=>{
   const idade= req.query.idade
   res.send('SE isso aparecer ' + idade + ' é poqrque o brasil ganhou')
+})
+//questão 12:
+app.get('/', (req,res)=>{
+  res.render('home', {titilo:'entendi fi tudo'});
 })
